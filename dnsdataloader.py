@@ -108,7 +108,7 @@ class DNSDataLoader(object):
         ysource = self.data['y']
         wilcox_ysource = self.data['wilcox_y']
         for key in self.data.keys():
-            if key not in ["y", "wilcox_y", "utau", "ytau", "utau_input", "ytau_input"]:
+            if key not in ["y", "wilcox_y", "utau", "ytau", "utau_input", "ytau_input", "bary_x", "bary_y"]:
                 if key[0:6] == "wilcox":
                     f = interp1d(wilcox_ysource, self.data[key])
                 else:
